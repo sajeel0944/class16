@@ -26,7 +26,7 @@ export async function POST(request:NextRequest){
 
 
 // is ky andar sign ky andar ka data fetch kar raha hai 
-const signSave=await fetch("http://localhost:3000/api/sign");
+const signSave=await fetch("https://class16.vercel.app/api/sign");
 
 // is ky andar sign ky andar ko json main convert kar rahy hai
 const saveDataSign=await signSave.json()
