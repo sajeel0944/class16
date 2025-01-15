@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { emailData } from "../sign/route";
 
 
-// is main jo sign up main jo export data kar waya tha  wo is main save kia hai "emailData" yaha par import kia hai
-const saveDataSign=emailData;
 
 // is main nichy post main jo data araha hai wo is main save ho raha hai 
 const saveDataLogi=[
@@ -25,6 +22,14 @@ export async function POST(request:NextRequest){
 	// console.log(body)
 	saveDataLogi.push(body)
 	// console.log(walify)
+
+
+
+// is ky andar sign ky andar ka data fetch kar raha hai 
+const signSave=await fetch("http://localhost:3000/api/sign");
+
+// is ky andar sign ky andar ko json main convert kar rahy hai
+const saveDataSign=await signSave.json()
 
 
 // is main saveDataSign array ki lenght count ho rahe hai is ko nichy "try" ky "if" ky andar dy rahy hai 

@@ -5,7 +5,7 @@ interface EmailData {
     password: string;
   }
 //  is main sara bata araha hai or is ko export is liye karwa ya hai q ky is ka data login page main jaye ga 
-   export const emailData : EmailData[]=[
+    const emailData : EmailData[]=[
         {
             email:"",
             password:"",
